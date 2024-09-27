@@ -1,0 +1,7 @@
+
+<mat-list role="list" *ngIf="gefundeneKennzeichen | async as kennzeichen">
+    <mat-list-item role="listitem" *ngFor="let einKennzeichen of kennzeichen">
+        {{ einKennzeichen.zeitpunktDesFindens | date: 'short' }}: {{ einKennzeichen.kuerzel }}
+    </mat-list-item>
+</mat-list>
+  

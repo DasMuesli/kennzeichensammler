@@ -1,0 +1,10 @@
+<div class="appWrapper">
+    <div>
+        Angemeldet: {{ user | async }}
+    </div>
+    <div class="menue">
+        <button *ngFor="let item of menueItems" mat-button (click)="navigiereZu(item.path)">{{ item.title }}</button>
+    </div>
+
+    <router-outlet />
+</div>

@@ -1,0 +1,9 @@
+<ng-container *ngIf="verfuegbareKennzeichen | async as kennzeichen">
+    <button 
+    *ngFor="let einKennzeichen of kennzeichen" 
+    mat-raised-button 
+    (click)="clickOnKennzeichen(einKennzeichen.kennzeichen)" 
+    [color]="einKennzeichen.farbe">
+        {{  einKennzeichen.kennzeichen }}
+    </button>
+</ng-container>

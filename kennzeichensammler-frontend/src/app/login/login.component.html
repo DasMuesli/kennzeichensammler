@@ -1,0 +1,22 @@
+
+<div [formGroup]="form" class="loginForm">
+    <mat-form-field appearance="outline">
+        <mat-label>Benutzername</mat-label>
+        <input 
+        matInput 
+        formControlName="benutzername"
+        placeholder="Max"
+        >
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>Passwort</mat-label>
+        <input 
+        matInput 
+        type="password" 
+        formControlName="passwort"
+        placeholder="***"
+        >
+    </mat-form-field>
+</div>
+
+<button mat-raised-button (click)="onLogin()">{{mode}}</button>

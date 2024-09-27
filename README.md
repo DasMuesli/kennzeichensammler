@@ -3,6 +3,7 @@
 git clone git@github.com:DasMuesli/kennzeichensammler.git
 docker-compose up --build frontend
 ```
+
 ##  Datenbankschema
 ```sql
 CREATE TABLE benutzer (
@@ -24,3 +25,9 @@ CREATE TABLE gefundenekennzeichen (
 	CONSTRAINT gefundenekennzeichen_kennzeichen_fk FOREIGN KEY (kennzeichen) REFERENCES kennzeichen(kuerzel)
 );
 ``` 
+## Bei Problemen
+In der compose.yaml kann in DB-Service der Port mit `ports` statt `expose` nach außen hin freigegeben werden.  
+Dann kann mit einem beliebigen SQL-Tool die Datenbank bearbeitet werden.
+
+## Kennzeichen einfügen
+In der Datei `kennzeichen.sql`  ist eine Auswahl von Kennzeichen als SQL-Insert Statements.
